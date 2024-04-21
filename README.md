@@ -2,10 +2,20 @@
 
 ## Login Credentials
 
-username - Password - Role
-user - user - user
-pantry - pantry - pantry
-admin - admin - admin 
+1. 'User' Role Credentials
+* Username: user
+* Password: user
+* Role: user
+
+2. 'Pantry' Role Credentials
+* Username: pantry
+* Password: pantry
+* Role: pantry
+
+3. 'Admin' Role Credentials
+* Username: admin
+* Password: admin
+* Role: admin
 
 ## Website Features
 
