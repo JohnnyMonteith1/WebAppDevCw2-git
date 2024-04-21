@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        .navbar-custom { background-color: #f8f9fa; }
+        .navbar-custom .navbar-nav .nav-link { color: black; font-weight: bold; }
+        .navbar-custom .navbar-nav .nav-link:hover { color: #505050; }
+        .hero-section { 
+            padding: 3rem 0; 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Home_pic.jpg') no-repeat center center; 
+            background-size: cover; 
+            color: white;
+            text-align: center;
+            width: 100vw; 
+            margin-left: calc(-50vw + 50%); 
+        }
+        .footer { 
+            background-color: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+        }
+        /* Additional styles */
+        .container-custom {
+            padding: 0 15px;
+        }
+        .partner-logo {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .col-custom {
+            text-align: center;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar using Bootstrap's navbar component -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/TSPN_logo.png" alt="TSPN Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contactUs">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-3">Welcome to the Scottish Pantry Food Share Web Application</h1>
+            <p class="lead">Join us in our effort to reduce food waste and support local communities.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="content">
+        <!-- Stats Section -->
+        <div class="container-fluid bg-light py-5">
+            <div class="row text-center">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="display-4 font-weight-bold" style="color: #e67e22;">10</div>
+                    <p class="text-uppercase" style="color: #34495e; font-size: 18px;">Local Authorities</p>
+                    <hr class="mx-auto" style="width: 50px; border-top: 3px solid #e67e22;">
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="display-4 font-weight-bold" style="color: #2ecc71;">23</div>
+                    <p class="text-uppercase" style="color: #34495e; font-size: 18px;">Network Members</p>
+                    <hr class="mx-auto" style="width: 50px; border-top: 3px solid #2ecc71;">
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="display-4 font-weight-bold" style="color: #3498db;">34000</div>
+                    <p class="text-uppercase" style="color: #34495e; font-size: 18px;">Collective Pantry Members</p>
+                    <hr class="mx-auto" style="width: 50px; border-top: 3px solid #3498db;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners & Suppliers Section -->
+    <div class="partners-section py-5">
+        <div class="container-custom">
+            <h2 class="text-center text-white mb-5">Special Thanks to Our Partners & Suppliers</h2>
+            <div class="row justify-content-center align-items-center g-3 no-gutters">
+                <div class="col-6 col-sm-4 col-lg-2 col-custom mb-4">
+                    <img src="/Sponsor_1.png" alt="Sponsor 1" class="img-fluid partner-logo">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4">
+                    <img src="/Sponsor_2.png" alt="Sponsor 2" class="img-fluid partner-logo">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4">
+                    <img src="/Sponsor_3.jpg" alt="Sponsor 3" class="img-fluid partner-logo">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4">
+                    <img src="/Sponsor_4.png" alt="Sponsor 4" class="img-fluid partner-logo">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4">
+                    <img src="/Sponsor_5.png" alt="Sponsor 5" class="img-fluid partner-logo">
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-4">
+                    <img src="/Sponsor_6.jpg" alt="Sponsor 6" class="img-fluid partner-logo">
+                </div>
+                <!-- Repeat for other sponsors -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 The Scottish Pantry Network. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

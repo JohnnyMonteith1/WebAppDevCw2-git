@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>User Management</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#users}}
+            <tr>
+                <td>{{username}}</td>
+                <td>{{role}}</td>
+                <td>
+                    <!-- Form to delete user -->
+                    <form action="/delete-user" method="post">
+                        <input type="hidden" name="userId" value="{{_id}}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {{/users}}
+        </tbody>
+    </table>
+
+    <h2>Item Management</h2>
+    <!-- Additional functionalities can be added here -->
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

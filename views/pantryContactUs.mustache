@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        .navbar-custom { background-color: #f8f9fa; }
+        .navbar-custom .navbar-nav .nav-link { color: black; font-weight: bold; }
+        .navbar-custom .navbar-nav .nav-link:hover { color: #505050; }
+        .hero-section { 
+            padding: 3rem 0; 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Home_pic.jpg') no-repeat center center; 
+            background-size: cover; 
+            color: white;
+            text-align: center;
+            width: 100vw; 
+            margin-left: calc(-50vw + 50%); 
+        }
+        .footer { 
+            background-color: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+        }
+        form {
+            margin: 20px auto;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            resize: none;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar using Bootstrap's navbar component -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/TSPN_logo.png" alt="TSPN Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/pantryHome">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pantryAbout">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pantryContactUs">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/items">Available Items</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-3">Contact Us</h1>
+            <p class="lead">Drop us an email and someone will be in touch</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <form method="POST" action="/submit-contact">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 The Scottish Pantry Network. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
