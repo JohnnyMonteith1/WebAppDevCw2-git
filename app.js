@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const routes = require('./routes/routes');  // Ensure this path is correct
 
 const app = express();
-const port = 3000;
 
 // Set up Mustache as the view engine
 app.engine('mustache', MustacheExpress());
@@ -32,9 +31,9 @@ app.use(session({
 app.use('/', routes);
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+app.listen(process.env.PORT ||3000, () => {
+    console.log('Server started. Ctrl^c to quit.');
+    })  
 
 
 
